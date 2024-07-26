@@ -2,157 +2,8 @@ import React, { useEffect, useState } from "react";
 import Footer from "./footer";
 import "@fontsource-variable/inter";
 import logo from "../src/static/storm_logo.png";
-const topcollection = [
-  {
-    img: "/src/assets/nft/infynft/animation.png",
-    title: "Animation collection",
-    by: "Nigntingo",
-    item: "25",
-  },
-  {
-    img: "./src/assets/nft/infynft/illustration.png",
-    title: "Illustration collection",
-    by: "Nigntingo",
-    item: "25",
-  },
-  {
-    img: "./src/assets/nft/infynft/photography.png",
-    title: "Photography collection",
-    by: "Nigntingo",
-    item: "25",
-  },
-  {
-    img: "./src/assets/nft/infynft/gif.png",
-    title: "Gif collection",
-    by: "Nigntingo",
-    item: "25",
-  },
-];
-
-const ourcollection = [
-  {
-    mainimg: "./src/assets/nft/infynft/img1.png",
-    thumbnail: "./src/assets/nft/infynft/thumbnail1.png",
-    name: "King",
-    eth: "3.5",
-    title: "Probably A Label #650",
-  },
-  {
-    mainimg: "./src/assets/nft/infynft/img2.png",
-    thumbnail: "./src/assets/nft/infynft/thumbnail2.png",
-    name: "GoodBad",
-    eth: "3.5",
-    title: "Soki#0147",
-  },
-  {
-    mainimg: "./src/assets/nft/infynft/img3.png",
-    thumbnail: "./src/assets/nft/infynft/thumbnail3.png",
-    name: "CrazyJelly",
-    eth: "3.5",
-    title: "Windows #768",
-  },
-  {
-    mainimg: "./src/assets/nft/infynft/img4.png",
-    thumbnail: "./src/assets/nft/infynft/thumbnail1.png",
-    name: "Butterfly",
-    eth: "3.5",
-    title: "Probably A Label #650",
-  },
-  {
-    mainimg: "./src/assets/nft/infynft/img5.png",
-    thumbnail: "./src/assets/nft/infynft/thumbnail1.png",
-    name: "Angel",
-    eth: "3.5",
-    title: "Soki#0147",
-  },
-  {
-    mainimg: "./src/assets/nft/infynft/img6.png",
-    thumbnail: "./src/assets/nft/infynft/thumbnail1.png",
-    name: "Nigntingo",
-    eth: "3.5",
-    title: "Window#768",
-  },
-  {
-    mainimg: "./src/assets/nft/infynft/img7.png",
-    thumbnail: "./src/assets/nft/infynft/thumbnail4.png",
-    name: "King",
-    eth: "3.5",
-    title: "Probably A Label #650",
-  },
-  {
-    mainimg: "./src/assets/nft/infynft/img8.png",
-    thumbnail: "./src/assets/nft/infynft/thumbnail5.png",
-    name: "BigBull",
-    eth: "3.5",
-    title: "Window#768",
-  },
-];
-
-const bestcreator = [
-  {
-    img: "./src/assets/nft/infynft/avatar1.png",
-    name: "King",
-    eth: "3.5",
-  },
-  {
-    img: "./src/assets/nft/infynft/avatar2.png",
-    name: "King",
-    eth: "3.5",
-  },
-  {
-    img: "./src/assets/nft/infynft/avatar3.png",
-    name: "King",
-    eth: "3.5",
-  },
-  {
-    img: "./src/assets/nft/infynft/avatar4.png",
-    name: "King",
-    eth: "3.5",
-  },
-  {
-    img: "./src/assets/nft/infynft/avatar5.png",
-    name: "King",
-    eth: "3.5",
-  },
-  {
-    img: "./src/assets/nft/infynft/avatar6.png",
-    name: "King",
-    eth: "3.5",
-  },
-  {
-    img: "./src/assets/nft/infynft/avatar7.png",
-    name: "King",
-    eth: "3.5",
-  },
-  {
-    img: "./src/assets/nft/infynft/avatar7.png",
-    name: "King",
-    eth: "3.5",
-  },
-  {
-    img: "./src/assets/nft/infynft/avatar7.png",
-    name: "King",
-    eth: "3.5",
-  },
-];
-
-const accData = [
-  {
-    title: "What makes 'INFYNFT' unique compared to other platforms ?",
-    content:
-      "Unlike traditional NFT platforms, INFYNFT leverages the power of Web3 technology to provide a decentralized and boundless experience. The platform also offers an immersive metaverse environment, where users can engage with NFTs in a dynamic and interactive way.",
-  },
-  {
-    title: "How can I participate as an artist in INFYNFT ?",
-    content:
-      "Unlike traditional NFT platforms, INFYNFT leverages the power of Web3 technology to provide a decentralized and boundless experience. The platform also offers an immersive metaverse environment, where users can engage with NFTs in a dynamic and interactive way.",
-  },
-  {
-    title: "How does it work ?",
-    content:
-      "Unlike traditional NFT platforms, INFYNFT leverages the power of Web3 technology to provide a decentralized and boundless experience. The platform also offers an immersive metaverse environment, where users can engage with NFTs in a dynamic and interactive way.",
-  },
-];
+import svg_logo from "./static/logo_with_word.svg";
+import bg from "./assets/nft/infynft/back.png";
 
 const navitem = ["Home", "Explore", "Community", "Page", "Support"];
 
@@ -187,11 +38,7 @@ const InfyNft = () => {
     <div className="bg-[#050C24] font-interfont">
       <div className="relative mx-auto pt-6 flex flex-col items-center justify-center text-[#D2DADF] bg-[url('./src/assets/nft/infynft/gradient.svg')] bg-cover">
         <div className="absolute top-0 z-[1] opacity-10 w-full">
-          <img
-            src="./src/assets/nft/infynft/back.png"
-            alt="backimg"
-            className="mx-auto"
-          />
+          <img src={bg} alt="backimg" className="mx-auto" />
         </div>
         {/* HEADER */}
         <div
@@ -202,11 +49,7 @@ const InfyNft = () => {
         >
           <div className="md:max-w-[1120px] flex items-center justify-between md:px-0 md:gap-5 mb-8 md:mb-16 container md:mx-auto">
             <a href="#_" className="z-10">
-              <img
-                className="w-40"
-                src="./src/static/logo_with_word.svg"
-                alt="logo"
-              />
+              <img className="w-40" src={svg_logo} alt="logo" />
             </a>
             <div className="gap-5 md:flex hidden z-10">
               {navitem.map((data, index) => {
