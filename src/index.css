@@ -6,7 +6,9 @@
     font-family: 'xlox';
     src: url('./xyloxCartoony.otf');
 }
-
+*{
+    font-family:'Open Sans'
+}
 
 .btn{
     @apply px-4 py-2 text-lg;
@@ -28,6 +30,17 @@
     @apply mb-32
 }
 
-.font-cartoon{
+.font-cartoon ,h1,h2,h3,h4,h5,h6{
     font-family: 'xlox';
+    letter-spacing: 5px;
 }
+
+.bg-primary{
+    @apply !bg-[#050C24];
+}
+
+.btn:disabled{
+    @apply opacity-50;
+
+}
+

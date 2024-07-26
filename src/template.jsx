@@ -4,8 +4,9 @@ import "@fontsource-variable/inter";
 import logo from "../src/static/storm_logo.png";
 import svg_logo from "../src/static/logo_with_word.svg";
 import bg from "../src/assets/nft/infynft/back.png";
-
-const navitem = ["About", "Tokenomics", "Road Map", "Community", "Whitepaper"];
+import ConnectButton from "./components/connect_button";
+import { useDisclosure } from "@chakra-ui/react";
+import OpenPoolModal from "./components/OpenPoolModal";
 
 const navitems = [
   {
@@ -33,6 +34,7 @@ const navitems = [
 const InfyNft = () => {
   const [toggle, setToggle] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const { isOpen, onClose, onOpen } = useDisclosure();
   const toggleClass = () => {
     setIsNavOpen(!isNavOpen);
     const closeAfterClick = document.querySelector("#nav-icon4");
@@ -59,6 +61,7 @@ const InfyNft = () => {
   }, []);
   return (
     <div className="bg-[#050C24] font-interfont">
+      <OpenPoolModal isOpen={isOpen} onClose={onClose}/>
       <div className="relative mx-auto pt-6 flex flex-col items-center justify-center text-[#D2DADF] bg-[url('./src/assets/nft/infynft/gradient.svg')] bg-cover">
         <div className="absolute top-0 z-[1] opacity-10 w-full">
           <img src={bg} alt="backimg" className="mx-auto" />
@@ -92,9 +95,7 @@ const InfyNft = () => {
               })}
             </div>
             <div className="gap-2 md:flex hidden">
-              <button className="hover:border-white hover:border border border-transparent whitespace-nowrap rounded px-3 py-2.5 text-sm font-semibold bg-gradient-to-r from-green-500 via-green-500 to-teal-500 text-white z-20">
-                Wallet Connect
-              </button>
+              <ConnectButton />
             </div>
           </div>
 
@@ -136,6 +137,7 @@ const InfyNft = () => {
                   </a>
                 </div>
               ))}
+              <ConnectButton />
             </div>
           </div>
         </div>
@@ -143,7 +145,7 @@ const InfyNft = () => {
         <div className="px-5 xl:px-0 z-10 relative">
           <div className="page-item">
             <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold font-cartoon">
-              storm staking pool
+              VGR staking pool
             </h3>
             <p className="text-center text-lg mb-3">
               Staking of the people, by the people and for the people.
@@ -181,7 +183,7 @@ const InfyNft = () => {
               </div>
 
               <div className="flex flex-col py-5 px-4 gap-y-3 z-20">
-                <button className="hover:border hover:border-white border border-transparent btn font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500  cursor-pointer ">
+                <button className="hover:border hover:border-white border border-transparent btn font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500  cursor-pointer " onClick={onOpen}>
                   Open Pool
                 </button>
                 <button className="  border border-transparent btn font-semibold text-white rounded-lg bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500 shadow-md hover:border-green-600 hover:bg-none hover:text-green-600 transition-all delay-200 ease-in-out">
@@ -190,7 +192,7 @@ const InfyNft = () => {
               </div>
             </div>
           </div>
-          <div className="page-item">
+          {/* <div className="page-item">
             <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold font-cartoon">
               REWARD SYSTEM FOR HOLDERS
             </h3>
@@ -198,7 +200,7 @@ const InfyNft = () => {
               Storm Holders reward panel.
             </p>
 
-            {/* stake container */}
+            {/* stake container 
             <div className="border-2 rounded-lg border-green-800 ">
               <h3 className="capitalize text-lg border-b-2 border-green-800 items-center gap-2 flex p-4 py-2">
                 <img src={logo} alt="" className="w-10" /> Hold $VGR to Earn
@@ -231,7 +233,7 @@ const InfyNft = () => {
                 </button>
               </div>
             </div>
-          </div>
+           </div> */}
         </div>
         {/* FOOTER*/}
         <Footer></Footer>

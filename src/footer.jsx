@@ -102,7 +102,7 @@ function Footer() {
             </a>
           </div>
           <div className="-mt-1 md:hidden block">
-            &copy; {new Date().getFullYear()} INFYNFT. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Vhager. All Rights Reserved.
           </div>
         </div>
       </div>
