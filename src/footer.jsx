@@ -1,5 +1,6 @@
 import React from "react";
-import svg_logo from "./static/logo_with_word.svg";
+import svg_logo from "../src/static/logo_with_word.svg";
+
 function Footer() {
   return (
     <>

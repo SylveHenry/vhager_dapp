@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Footer from "./footer";
 import "@fontsource-variable/inter";
 import logo from "../src/static/storm_logo.png";
-import svg_logo from "./static/logo_with_word.svg";
-import bg from "./assets/nft/infynft/back.png";
+import svg_logo from "../src/static/logo_with_word.svg";
+import bg from "../src/assets/nft/infynft/back.png";
 
 const navitem = ["Home", "Explore", "Community", "Page", "Support"];
 
