@@ -3,33 +3,11 @@ import svg_logo from "./static/logo_with_word.svg";
 function Footer() {
   return (
     <>
-      <div className="relative bg-[#1E2230] flex flex-col gap-4 sm:flex-row justify-between p-8 lg:p-12 drop-shadow-lg rounded-lg max-w-6xl px-5 py-10 w-11/12">
-        <img src={svg_logo} alt="cta" className="absolute top-1 left-0 w-32" />
-        <div className="text-center md:text-left text-xl md:text-2xl font-bold md:whitespace-nowrap">
-          Subscribe to NFT<br></br>
-          <span className="text-sm leading-[28px] tracking-[0.01em]">
-            Subscribe for receiving valuable newsletters.
-          </span>
-        </div>
-        <div className="flex gap-2 items-center justify-center max-w-xs lg:max-w-md w-full">
-          <input
-            type="text"
-            className="focus:ring-1 focus:ring-white rounded-lg lg:py-2 flex-1 appearance-none border border-[#272C3E] w-full py-1 px-4 bg-[#1E2230] text-gray-200 placeholder-gray-400 shadow-sm text-sm md:text-base lg:text-lg focus:outline-none "
-            placeholder="Enter your email"
-          />
-          <button
-            className="hover:border hover:border-white border border-transparent px-4 py-1 lg:py-2 text-sm md:text-base lg:text-lg font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500"
-            type="submit"
-          >
-            Subscribe
-          </button>
-        </div>
-      </div>
-      <div className="-mt-20 flex h-fit py-8 md:py-10 w-full justify-center items-center bg-[#272C3E] px-5 xl:px-20">
-        <div className="max-w-[1121px] flex flex-col gap-8 md:flex-row w-full justify-between pt-20">
+      <div className=" flex h-fit  w-full justify-center items-center bg-[#272C3E] px-5 xl:px-20">
+        <div className="max-w-[1121px] flex flex-col gap-8 md:flex-row w-full justify-between pt-5">
           <div className="flex max-w-[282px] flex-col gap-8">
             <a href="#_">
-              <img src="./src/assets/nft/infynft/logo.svg" alt="logo" />
+              <img src={svg_logo} className="w-32" alt="logo" />
             </a>
             <div className="text-lg">
               We are a huge marketplace dedicated to connecting great artists of
