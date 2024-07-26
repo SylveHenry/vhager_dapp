@@ -5,7 +5,30 @@ import logo from "../src/static/storm_logo.png";
 import svg_logo from "../src/static/logo_with_word.svg";
 import bg from "../src/assets/nft/infynft/back.png";
 
-const navitem = ["Home", "Explore", "Community", "Page", "Support"];
+const navitem = ["About", "Tokenomics", "Road Map", "Community", "Whitepaper"];
+
+const navitems = [
+  {
+    text: "about",
+    link: "https://winterstorm.finance/#about",
+  },
+  {
+    text: "tokenomics",
+    link: "https://winterstorm.finance/#tokenomics",
+  },
+  {
+    text: "roadmap",
+    link: "https://winterstorm.finance/#roadmap",
+  },
+  {
+    text: "community",
+    link: "https://winterstorm.finance/#community",
+  },
+  {
+    text: "whitepaper",
+    link: "https://docs.winterstorm.finance",
+  },
+];
 
 const InfyNft = () => {
   const [toggle, setToggle] = useState(false);
@@ -52,44 +75,23 @@ const InfyNft = () => {
               <img className="w-40" src={svg_logo} alt="logo" />
             </a>
             <div className="gap-5 md:flex hidden z-10">
-              {navitem.map((data, index) => {
+              {navitems.map((data, index) => {
                 return (
                   <a
-                    href="#_"
+                    href={data.link}
                     key={index}
-                    className={`hover:text-[#5EE616] hover:border-b-2 hover:border-[#5EE616] border-b-2 ${
+                    className={`hover:text-[#5EE616] hover:border-b-2 uppercase hover:border-[#5EE616] border-b-2 ${
                       index === 0
                         ? "border-[#5EE616] text-[#5EE616] border-b-2"
                         : "border-transparent"
                     }`}
                   >
-                    {data}
+                    {data.text}
                   </a>
                 );
               })}
             </div>
             <div className="gap-2 md:flex hidden">
-              <div className="gap-5 justify-center md:flex hidden z-10 group relative">
-                <img
-                  src="./src/assets/nft/infynft/searchicon.svg"
-                  alt="searchicon"
-                  className="cursor-pointer px-2"
-                />
-                <div className="px-2 bg-gray-700 py-3 group-hover:block hidden absolute top-10 right-0 rounded-lg">
-                  <div className="flex items-center">
-                    <input
-                      type="text"
-                      className="max-w-[150px] text-white text-sm bg-transparent focus:ring-0 border-transparent outline-none"
-                      placeholder="Search here.."
-                    />
-                    <img
-                      src="./src/assets/nft/infynft/searchicon.svg"
-                      alt="searchicon"
-                      className="cursor-pointer pr-5"
-                    />
-                  </div>
-                </div>
-              </div>
               <button className="hover:border-white hover:border border border-transparent whitespace-nowrap rounded px-3 py-2.5 text-sm font-semibold bg-gradient-to-r from-green-500 via-green-500 to-teal-500 text-white z-20">
                 Wallet Connect
               </button>
@@ -127,9 +129,11 @@ const InfyNft = () => {
             }`}
           >
             <div className="bg-[#050C24] p-3 rounded-xl text-center">
-              {navitem.map((data, index) => (
+              {navitems.map((data, index) => (
                 <div key={index} className="p-3">
-                  <span className="font-bold text-lg ">{data}</span>
+                  <a href={data.link} className="font-bold text-lg uppercase ">
+                    {data.text}
+                  </a>
                 </div>
               ))}
             </div>
@@ -138,7 +142,7 @@ const InfyNft = () => {
 
         <div className="px-5 xl:px-0 z-10 relative">
           <div className="page-item">
-            <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold">
+            <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold font-cartoon">
               storm staking pool
             </h3>
             <p className="text-center text-lg mb-3">
@@ -148,7 +152,7 @@ const InfyNft = () => {
             {/* stake container */}
             <div className="border-2 rounded-lg border-green-800 ">
               <h3 className="capitalize text-lg border-b-2 border-green-800 items-center gap-2 flex p-4 py-2">
-                <img src={logo} alt="" className="w-10" /> Stake STM to earn STM
+                <img src={logo} alt="" className="w-10" /> Stake VGR to earn VGR
               </h3>
 
               <div className="table-item">
@@ -156,7 +160,7 @@ const InfyNft = () => {
                 <p>0%</p>
               </div>
               <div className="table-item">
-                <p>Available $STM</p>
+                <p>Available $VGR</p>
                 <p>0</p>
               </div>
               <div className="table-item">
@@ -177,17 +181,17 @@ const InfyNft = () => {
               </div>
 
               <div className="flex flex-col py-5 px-4 gap-y-3 z-20">
-                <button className="hover:border hover:border-white border border-transparent btn font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500 cursor-pointer ">
+                <button className="hover:border hover:border-white border border-transparent btn font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500  cursor-pointer ">
                   Open Pool
                 </button>
                 <button className="  border border-transparent btn font-semibold text-white rounded-lg bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500 shadow-md hover:border-green-600 hover:bg-none hover:text-green-600 transition-all delay-200 ease-in-out">
-                  GET STM
+                  GET VGR
                 </button>
               </div>
             </div>
           </div>
           <div className="page-item">
-            <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold">
+            <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold font-cartoon">
               REWARD SYSTEM FOR HOLDERS
             </h3>
             <p className="text-center text-lg mb-3">
@@ -197,8 +201,8 @@ const InfyNft = () => {
             {/* stake container */}
             <div className="border-2 rounded-lg border-green-800 ">
               <h3 className="capitalize text-lg border-b-2 border-green-800 items-center gap-2 flex p-4 py-2">
-                <img src={logo} alt="" className="w-10" /> Hold $STM to Earn
-                $ETH
+                <img src={logo} alt="" className="w-10" /> Hold $VGR to Earn
+                $SOL
               </h3>
 
               <div className="table-item">
@@ -207,15 +211,15 @@ const InfyNft = () => {
               </div>
               <div className="table-item">
                 <p>Pending Rewards</p>
-                <p>0 ETH</p>
+                <p>0 SOL</p>
               </div>
               <div className="table-item">
                 <p>Last Updated Time</p>
                 <p>...</p>
               </div>
               <div className="table-item">
-                <p>$STM in Wallet</p>
-                <p>0 STM</p>
+                <p>$VGR in Wallet</p>
+                <p>0 VGR</p>
               </div>
 
               <div className="flex flex-col py-5 px-4 gap-y-3 z-20">
@@ -223,7 +227,7 @@ const InfyNft = () => {
                   Open Pool
                 </button>
                 <button className="  border border-transparent btn font-semibold text-white rounded-lg bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500 shadow-md hover:border-green-600 hover:bg-none hover:text-green-600 transition-all delay-200 ease-in-out">
-                  GET STM
+                  GET VGR
                 </button>
               </div>
             </div>

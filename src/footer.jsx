@@ -12,11 +12,11 @@ function Footer() {
             </a>
             <div className="text-lg">
               We are a huge marketplace dedicated to connecting great artists of
-              all <span className="font-semibold">INFYNFT</span> with their fans
+              all <span className="font-semibold">Vhager</span> with their fans
               and unique token collectors!
             </div>
             <div className="-mt-1 hidden md:block text-sm">
-              &copy; 2023 INFYNFT. All Rights Reserved.
+              &copy; 2024 Vhager. All Rights Reserved.
             </div>
           </div>
           <div className="flex flex-col gap-8 md:gap-10">

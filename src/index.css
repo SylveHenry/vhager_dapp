@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'xlox';
+    src: url('./xyloxCartoony.otf');
+}
+
+
 .btn{
     @apply px-4 py-2 text-lg;
 }
@@ -20,4 +26,8 @@
 
 .page-item{
     @apply mb-32
+}
+
+.font-cartoon{
+    font-family: 'xlox';
 }
