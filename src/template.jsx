@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Footer from "./footer";
 import "@fontsource-variable/inter";
-
+import logo from "../src/static/storm_logo.png";
 const topcollection = [
   {
     img: "/src/assets/nft/infynft/animation.png",
@@ -185,7 +186,7 @@ const InfyNft = () => {
   return (
     <div className="bg-[#050C24] font-interfont">
       <div className="relative mx-auto pt-6 flex flex-col items-center justify-center text-[#D2DADF] bg-[url('./src/assets/nft/infynft/gradient.svg')] bg-cover">
-        <div className="absolute top-0 opacity-10 w-full">
+        <div className="absolute top-0 z-[1] opacity-10 w-full">
           <img
             src="./src/assets/nft/infynft/back.png"
             alt="backimg"
@@ -292,394 +293,101 @@ const InfyNft = () => {
           </div>
         </div>
 
-        <div className="flex w-full md:max-w-[1120px] flex-col gap-10 md:gap-20 px-5 xl:px-0">
-          {/* TOP SECTION */}
-          <div
-            className={`${
-              isNavOpen ? "z-0" : "z-10"
-            }  flex flex-col gap-5 md:gap-0 items-center justify-center md:flex-row md:justify-between xl:pr-20`}
-          >
-            <div className="md:max-w-[598px] flex flex-col gap-5 tracking-[0.01em]">
-              <div className="text-[36px] lg:text-[52px] font-bold leading-[49px] lg:leading-[71px]">
-                Winter is here. The $Storm is upon us.
-              </div>
-              <div className="lg:text-[22px] text-lg leading-[25px] md:leading-[30px] font-normal">
-                <p>
-                  {" "}
-                  Amidst the icy winds of the crypto winter, a new $STORM has
-                  emerged. Launched on the Arbitrum Blockchain, Winter Storm
-                  aims to capitalize on the current market sentiment with its
-                  deflationary token. $STORM will be utilized within the Winter
-                  Storm ecosystem applications.
-                </p>
-                <p>Total Supply: 50 Trillion.</p>
-                <p>
-                  Contract Address: 0x47d6DbC99827cB929F274cd62Be2013c76E54a6a
-                </p>
-              </div>
-              <div>
-                <div className="flex gap-4">
-                <a href="https://www.pinksale.finance/">
-                  <button className="hover:border-white hover:border border border-transparent flex items-center gap-2 rounded px-3 py-2.5 text-sm font-semibold bg-gradient-to-r from-green-500 via-green-500 to-teal-500 text-white">
-                    Get Storm
-                    <img
-                      src="./src/assets/nft/infynft/arrow.svg"
-                      alt="arrow image"
-                    />
-                  </button>{" "}
-                </a>  
-                 <a href="https://airdrop.winterstorm.finance">
-                  <button className="hover:border-white hover:border border border-transparent flex items-center gap-2 rounded px-3 py-2.5 text-sm font-semibold bg-gradient-to-r from-green-500 via-green-500 to-teal-500 text-white">
-                  Airdrop Form
-               
-                  </button>{" "}
-                </a>
-                </div>
-           
-              </div>
-            </div>
-            <div className="max-w-[350px] md:max-w-[300px] w-full flex items-center md:justify-end">
-              <img className="w-[300px]" src="./src/static/storm_logo.png" alt="round" />
-            </div>
-          </div>
-          {/* TOP COLLECTION */}
-          <div className="flex flex-col gap-5 md:gap-[37px] z-10">
-            <div className="flex items-center justify-between">
-              <div className="text-2xl md:text-[32px] font-semibold leading-[44px] tracking-[0.01em]">
-                Top Collections
-              </div>
-              <div className="border-b-2 border-b-transparent hover:border-b-2 hover:border-green-600">
-                <a
-                  href="#_"
-                  className="flex text-sm items-center gap-2 md:text-lg font-medium"
-                >
-                  See All
-                  <img
-                    src="./src/assets/nft/infynft/arrow.svg"
-                    alt="arrow"
-                    className="md:block hidden"
-                  />
-                </a>
-              </div>
-            </div>
-            <div className="flex gap-4 overflow-auto">
-              {topcollection.map((data, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="cursor-pointer flex min-w-[262px] hover:bg-gradient-to-r from-[#5EE616] to-[#209B72] sm:min-w-0 flex-col items-center justify-center gap-[7px] p-0.5 hover:rounded-xl bg-[#1E2230] rounded-xl"
-                  >
-                    <div className="bg-[#050C24] p-3 rounded-xl overflow-hidden">
-                      <div className="w-full overflow-hidden rounded-lg">
-                        <img
-                          src={data.img}
-                          alt="img"
-                          className="hover:scale-125 delay-200 duration-300 ease-in-out"
-                        />
-                      </div>
-                      <div className="flex w-full flex-col justify-start">
-                        <div className="text-lg font-medium">{data.title}</div>
-                        <div className="text-sm font-normal leading-[26px]">
-                          by <span className="text-[#209B72]">@{data.by}</span>
-                        </div>
-                        <div className="text-sm font-normal leading-[26px]">
-                          {data.item} Item
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          {/* OUR COLLECTION */}
-          <div className="flex flex-col gap-5 md:gap-[37px]">
-            <div className="flex items-center justify-between">
-              <div className="text-2xl md:text-[32px] font-semibold leading-[44px] tracking-[0.01em]">
-                Our Collections
-              </div>
-              <div className="border-b-2 border-b-transparent hover:border-b-2 hover:border-green-600">
-                <a
-                  href="#_"
-                  className="text-sm flex gap-2 md:text-lg font-medium"
-                >
-                  More Explore{" "}
-                  <img
-                    src="./src/assets/nft/infynft/arrow.svg"
-                    alt="arrow"
-                    className="md:block hidden"
-                  />
-                </a>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[24px] place-items-center">
-              {ourcollection.map((data, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="flex min-w-[262px] md:min-w-min flex-col items-center justify-center gap-5 rounded-[10px] border border-[#2F3548] p-3"
-                  >
-                    <div className="overflow-hidden rounded-[10px]">
-                      <img
-                        src={data.mainimg}
-                        alt="img"
-                        className="w-[350px] hover:scale-125 delay-200 duration-300 ease-in-out "
-                      />
-                    </div>
-                    <div className="flex w-full flex-col gap-5">
-                      <div className="w-full flex flex-col gap-2">
-                        <div className="flex justify-between">
-                          <div className="flex items-center gap-2 md:gap-1 lg:gap-2">
-                            <img
-                              src={data?.thumbnail}
-                              alt="thumbnail"
-                              className="rounded-full"
-                            />
-                            <span className="text-[9px] lg:text-sm whitespace-nowrap font-normal text-[#209B72]">
-                              @{data.name}
-                            </span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <img
-                              src="./src/assets/nft/infynft/eth.png"
-                              alt="eth"
-                            />
-                            <span className="text-xs md:text-[9px] lg:text-xs font-normal">
-                              3.5ETH
-                            </span>
-                          </div>
-                        </div>
-                        <div className="text-lg md:text-sm lg:text-lg whitespace-nowrap text-ellipsis font-medium">
-                          {data?.title}
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-center rounded p-0.5 text-sm font-semibold text-[#5EE616] bg-gradient-to-r from-green-400 to-teal-600 hover:text-[#FDFBFB] w-fit mx-auto">
-                        <button className="px-3 py-2.5 bg-[#050C24] hover:bg-gradient-to-r from-green-400 to-teal-600">
-                          Buy now
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          {/* BEST COLLECTION */}
-          <div className="flex flex-col gap-[37px]">
-            <div className="text-[32px] font-semibold leading-[44px] tracking-[0.01em]">
-              Best Creators and Seller
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-[24px]">
-              {bestcreator.map((data, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="cursor-pointer flex min-h-[82px] w-full md:max-w-[357px] items-center justify-between gap-[7px] rounded-[10px] border border-[#2F3548] p-3 hover:bg-gradient-to-tr from-[#5FE716] to-[#209B72] group"
-                  >
-                    <div className="flex items-center justify-center gap-3 ">
-                      <div className="relative">
-                        <img
-                          src={data.img}
-                          alt="not found"
-                          className="rounded"
-                        />
-                        <div className="text-red absolute -right-1 -top-1 flex h-[14px] w-[14px] rounded-full">
-                          <img
-                            src="./src/assets/nft/infynft/right.png"
-                            alt=""
-                          />
-                        </div>
-                      </div>
+        <div className="px-5 xl:px-0 z-10 relative">
+          <div className="page-item">
+            <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold">
+              storm staking pool
+            </h3>
+            <p className="text-center text-lg mb-3">
+              Staking of the people, by the people and for the people.
+            </p>
 
-                      <div className="flex flex-col">
-                        <div className="text-lg font-medium">@Milla_Wendt</div>
-                        <div className="text-sm font-normal">12.25 ETH</div>
-                      </div>
-                    </div>
-                    <div>
-                      <svg
-                        width="38"
-                        height="38"
-                        viewBox="0 0 38 38"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle
-                          cx="19"
-                          cy="19"
-                          r="19"
-                          fill="none"
-                          className="fill-[#32353E] group-hover:fill-[#D2DADF]"
-                        />
-                        <path
-                          d="M11 26C11 24.9391 11.4214 23.9217 12.1716 23.1716C12.9217 22.4214 13.9391 22 15 22H23C24.0609 22 25.0783 22.4214 25.8284 23.1716C26.5786 23.9217 27 24.9391 27 26C27 26.5304 26.7893 27.0391 26.4142 27.4142C26.0391 27.7893 25.5304 28 25 28H13C12.4696 28 11.9609 27.7893 11.5858 27.4142C11.2107 27.0391 11 26.5304 11 26Z"
-                          stroke="#1B1E27"
-                          strokeWidth="2.41667"
-                          strokeLinejoin="round"
-                        />
-                        <path
-                          d="M19 18C20.6569 18 22 16.6569 22 15C22 13.3431 20.6569 12 19 12C17.3431 12 16 13.3431 16 15C16 16.6569 17.3431 18 19 18Z"
-                          stroke="#1B1E27"
-                          strokeWidth="2.41667"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                );
-              })}
+            {/* stake container */}
+            <div className="border-2 rounded-lg border-green-800 ">
+              <h3 className="capitalize text-lg border-b-2 border-green-800 items-center gap-2 flex p-4 py-2">
+                <img src={logo} alt="" className="w-10" /> Stake STM to earn STM
+              </h3>
+
+              <div className="table-item">
+                <p>APY</p>
+                <p>0%</p>
+              </div>
+              <div className="table-item">
+                <p>Available $STM</p>
+                <p>0</p>
+              </div>
+              <div className="table-item">
+                <p>My Stakings</p>
+                <p>0</p>
+              </div>
+              <div className="table-item">
+                <p>Pending Rewards</p>
+                <p>0</p>
+              </div>
+              <div className="table-item">
+                <p>Unpaid Rewards</p>
+                <p>0</p>
+              </div>
+              <div className="table-item">
+                <p>Total Staked</p>
+                <p>0.00</p>
+              </div>
+
+              <div className="flex flex-col py-5 px-4 gap-y-3 z-20">
+                <button className="hover:border hover:border-white border border-transparent btn font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500 cursor-pointer ">
+                  Open Pool
+                </button>
+                <button className="  border border-transparent btn font-semibold text-white rounded-lg bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500 shadow-md hover:border-green-600 hover:bg-none hover:text-green-600 transition-all delay-200 ease-in-out">
+                  GET STM
+                </button>
+              </div>
             </div>
           </div>
-          {/* FAQ SECTION */}
-          <div className="flex flex-col justify-center items-center gap-5 px-5 lg:px-52 mb-12">
-            <h1 className="text-[32px] font-semibold leading-[48px]">FAQ</h1>
-            <div className="text-center font-normal text-lg mb-5">
-              We are a huge marketplace dedicated to connecting great artists of
-              all NFT with their fans and unique token collectors!
-            </div>
+          <div className="page-item">
+            <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold">
+              REWARD SYSTEM FOR HOLDERS
+            </h3>
+            <p className="text-center text-lg mb-3">
+              Storm Holders reward panel.
+            </p>
 
-            <div className="mx-auto flex w-full flex-col items-center justify-center">
-              <div className="h-[2px] w-full bg-gradient-to-l from-[#1E2230] to-[rgba(30, 34, 48, 0)]]"></div>
+            {/* stake container */}
+            <div className="border-2 rounded-lg border-green-800 ">
+              <h3 className="capitalize text-lg border-b-2 border-green-800 items-center gap-2 flex p-4 py-2">
+                <img src={logo} alt="" className="w-10" /> Hold $STM to Earn
+                $ETH
+              </h3>
 
-              {accData.map((acc, index) => {
-                return (
-                  <div className="w-full" key={index}>
-                    <Accordion title={acc.title} content={acc.content} />
-                    <div className="h-[2px] w-full bg-gradient-to-l from-[#1E2230] to-[rgba(30, 34, 48, 0)]]"></div>
-                  </div>
-                );
-              })}
+              <div className="table-item">
+                <p>APY</p>
+                <p>0%</p>
+              </div>
+              <div className="table-item">
+                <p>Pending Rewards</p>
+                <p>0 ETH</p>
+              </div>
+              <div className="table-item">
+                <p>Last Updated Time</p>
+                <p>...</p>
+              </div>
+              <div className="table-item">
+                <p>$STM in Wallet</p>
+                <p>0 STM</p>
+              </div>
+
+              <div className="flex flex-col py-5 px-4 gap-y-3 z-20">
+                <button className="hover:border hover:border-white border border-transparent btn font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500 cursor-pointer ">
+                  Open Pool
+                </button>
+                <button className="  border border-transparent btn font-semibold text-white rounded-lg bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500 shadow-md hover:border-green-600 hover:bg-none hover:text-green-600 transition-all delay-200 ease-in-out">
+                  GET STM
+                </button>
+              </div>
             </div>
           </div>
         </div>
         {/* FOOTER*/}
-        <div className="relative bg-[#1E2230] flex flex-col gap-4 sm:flex-row justify-between p-8 lg:p-12 drop-shadow-lg rounded-lg max-w-6xl px-5 w-11/12">
-          <img
-            src="./src/assets/nft/infynft/ctaback.svg"
-            alt="cta"
-            className="absolute top-0 left-0 w-24"
-          />
-          <div className="text-center md:text-left text-xl md:text-2xl font-bold md:whitespace-nowrap">
-            Subscribe to NFT<br></br>
-            <span className="text-sm leading-[28px] tracking-[0.01em]">
-              Subscribe for receiving valuable newsletters.
-            </span>
-          </div>
-          <div className="flex gap-2 items-center justify-center max-w-xs lg:max-w-md w-full">
-            <input
-              type="text"
-              className="focus:ring-1 focus:ring-white rounded-lg lg:py-2 flex-1 appearance-none border border-[#272C3E] w-full py-1 px-4 bg-[#1E2230] text-gray-200 placeholder-gray-400 shadow-sm text-sm md:text-base lg:text-lg focus:outline-none "
-              placeholder="Enter your email"
-            />
-            <button
-              className="hover:border hover:border-white border border-transparent px-4 py-1 lg:py-2 text-sm md:text-base lg:text-lg font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500"
-              type="submit"
-            >
-              Subscribe
-            </button>
-          </div>
-        </div>
-        <div className="-mt-20 flex h-fit py-8 md:py-10 w-full justify-center items-center bg-[#272C3E] px-5 xl:px-20">
-          <div className="max-w-[1121px] flex flex-col gap-8 md:flex-row w-full justify-between pt-20">
-            <div className="flex max-w-[282px] flex-col gap-8">
-              <a href="#_">
-                <img src="./src/assets/nft/infynft/logo.svg" alt="logo" />
-              </a>
-              <div className="text-lg">
-                We are a huge marketplace dedicated to connecting great artists
-                of all <span className="font-semibold">INFYNFT</span> with their
-                fans and unique token collectors!
-              </div>
-              <div className="-mt-1 hidden md:block text-sm">
-                &copy; 2023 INFYNFT. All Rights Reserved.
-              </div>
-            </div>
-            <div className="flex flex-col gap-8 md:gap-10">
-              <div className="font-semibold text-xl">Company</div>
-              <div className="flex flex-col gap-4 text-lg">
-                <a href="#_" className="hover:opacity-60">
-                  About
-                </a>
-                <a href="#_" className="hover:opacity-60">
-                  Careers
-                </a>
-                <a href="#_" className="hover:opacity-60">
-                  Press
-                </a>
-                <a href="#_" className="hover:opacity-60">
-                  Engineering Blog
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-col gap-8 md:gap-10">
-              <div className="font-semibold text-xl">Customer</div>
-              <div className="flex flex-col gap-4 text-lg">
-                <a href="#_" className="hover:opacity-60">
-                  Clinet Support
-                </a>
-                <a href="#_" className="hover:opacity-60">
-                  Latest news
-                </a>
-                <a href="#_" className="hover:opacity-60">
-                  Company Details
-                </a>
-                <a href="#_" className="hover:opacity-60">
-                  Who we are{" "}
-                </a>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <a href="#_" className=" ">
-                <svg
-                  className="hover:fill-green-400"
-                  stroke="currentColor"
-                  fill="white"
-                  strokeWidth="0"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M23.00025,0 L1.0005,0 C0.44775,0 0,0.44775 0,0.99975 L0,23.00025 C0,23.55225 0.44775,24 1.0005,24 L12.75,24 L12.75,15 L9.75,15 L9.75,11.25 L12.75,11.25 L12.75,8.25 C12.75,5.15025 14.71275,3.62475 17.478,3.62475 C18.8025,3.62475 19.941,3.72375 20.2725,3.76725 L20.2725,7.00725 L18.35475,7.008 C16.851,7.008 16.5,7.72275 16.5,8.77125 L16.5,11.25 L20.25,11.25 L19.5,15 L16.5,15 L16.56,24 L23.00025,24 C23.55225,24 24,23.55225 24,23.00025 L24,0.99975 C24,0.44775 23.55225,0 23.00025,0"
-                  ></path>
-                </svg>
-              </a>
-
-              <a href="#_">
-                <svg
-                  className="hover:fill-green-400"
-                  stroke="currentColor"
-                  fill="white"
-                  strokeWidth="0"
-                  viewBox="0 0 512 512"
-                  height="1.2em"
-                  width="1.2em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
-                </svg>
-              </a>
-              <a href="#_">
-                <svg
-                  className="hover:fill-green-400"
-                  stroke="currentColor"
-                  fill="white"
-                  strokeWidth="0"
-                  viewBox="0 0 16 16"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
-                </svg>
-              </a>
-            </div>
-            <div className="-mt-1 md:hidden block">
-              &copy; {new Date().getFullYear()} INFYNFT. All Rights Reserved.
-            </div>
-          </div>
-        </div>
+        <Footer></Footer>
       </div>
     </div>
   );

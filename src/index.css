@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn{
+    @apply px-4 py-2 text-lg;
+}
+
+.table-item{
+    @apply flex justify-between p-4 py-3;
+}
+
+.default-gradient{
+    @apply bg-gradient-to-r from-green-500 via-green-500 to-teal-500;
+}
+
+.text-gradient{
+    @apply default-gradient bg-clip-text text-transparent;
+}
+
+.page-item{
+    @apply mb-32
+}
