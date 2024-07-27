@@ -7,14 +7,28 @@ import {
 } from "@solana/wallet-adapter-react-ui";
 import React from "react";
 
-const buttonStyle = { backgroundColor: "#16B19A" };
-function ConnectButton() {
+const buttonStyle = {
+  backgroundColor: "#16B19A",
+  zIndex: 6,
+  lineHeight: "unset",
+};
+function ConnectButton({ className }) {
   const { wallet, connected } = useWallet();
 
   if (connected) {
-    return <WalletDisconnectButton style={buttonStyle} />;
+    return (
+      <div className="-translate-x-10 z-30">
+        <WalletDisconnectButton style={buttonStyle} />
+      </div>
+    );
   } else {
-    return <WalletModalButton style={buttonStyle} />;
+    return (
+      <div className="-translate-x-10 z-30">
+        <WalletModalButton style={buttonStyle}>
+          Connect Wallet
+        </WalletModalButton>
+      </div>
+    );
   }
   // return (
   //   <WalletConnectButton className="hover:border-white hover:border border border-transparent whitespace-nowrap rounded px-3 py-2.5 text-sm font-semibold bg-gradient-to-r from-green-500 via-green-500 to-teal-500 text-white z-20" />

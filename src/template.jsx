@@ -104,6 +104,7 @@ const InfyNft = () => {
               </div>
             </div>
 
+            <ConnectButton className='translate-x-10'/>
             <button
               className="w-12 h-12 relative focus:outline-none md:hidden overscroll-none"
               onClick={() => {
@@ -145,7 +146,6 @@ const InfyNft = () => {
                     </a>
                   </div>
                 ))}
-                <ConnectButton />
               </div>
             </div>
           </div>
@@ -161,9 +161,9 @@ const InfyNft = () => {
 
               {/* stake container */}
               <div className="border-2 rounded-lg border-green-800 ">
-                <h3 className="capitalize text-lg border-b-2 border-green-800 items-center gap-2 flex p-4 py-2">
-                  <img src={logo} alt="" className="w-10" /> Stake VGR to earn
-                  VGR
+                <h3 className="capitalize text-lg border-b-2 border-green-800 items-center gap-2 flex p-4 py-2 ">
+                  <img src={logo} alt="" className="w-10" />{" "}
+                  <p className="text-center">Stake VGR to earn VGR</p>
                 </h3>
 
                 <div className="table-item">
@@ -217,48 +217,6 @@ const InfyNft = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="page-item">
-            <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold font-cartoon">
-              REWARD SYSTEM FOR HOLDERS
-            </h3>
-            <p className="text-center text-lg mb-3">
-              Storm Holders reward panel.
-            </p>
-
-            {/* stake container 
-            <div className="border-2 rounded-lg border-green-800 ">
-              <h3 className="capitalize text-lg border-b-2 border-green-800 items-center gap-2 flex p-4 py-2">
-                <img src={logo} alt="" className="w-10" /> Hold $VGR to Earn
-                $SOL
-              </h3>
-
-              <div className="table-item">
-                <p>APY</p>
-                <p>0%</p>
-              </div>
-              <div className="table-item">
-                <p>Pending Rewards</p>
-                <p>0 SOL</p>
-              </div>
-              <div className="table-item">
-                <p>Last Updated Time</p>
-                <p>...</p>
-              </div>
-              <div className="table-item">
-                <p>$VGR in Wallet</p>
-                <p>0 VGR</p>
-              </div>
-
-              <div className="flex flex-col py-5 px-4 gap-y-3 z-20">
-                <button className="hover:border hover:border-white border border-transparent btn font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500 cursor-pointer ">
-                  Open Pool
-                </button>
-                <button className="  border border-transparent btn font-semibold text-white rounded-lg bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500 shadow-md hover:border-green-600 hover:bg-none hover:text-green-600 transition-all delay-200 ease-in-out">
-                  GET VGR
-                </button>
-              </div>
-            </div>
-           </div> */}
           </div>
           {/* FOOTER*/}
         </div>
