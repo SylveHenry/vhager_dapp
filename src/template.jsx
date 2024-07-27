@@ -149,10 +149,10 @@ const InfyNft = () => {
         <div className="px-5 xl:px-0 z-10 relative">
           <div className="page-item">
             <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold font-cartoon">
-              VGR staking pool
+              VHAGAR staking pool
             </h3>
             <p className="text-center text-lg mb-3">
-              Staking of the people, by the people and for the people.
+              Vhagar on Solana Staking Pool.
             </p>
 
             {/* stake container */}
