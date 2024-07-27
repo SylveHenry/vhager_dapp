@@ -13,9 +13,13 @@ import {
   NumberInputField,
   NumberInputStepper,
 } from "@chakra-ui/react";
+import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import React from "react";
 
 function OpenPoolModal({ isOpen, onClose }) {
+
+  const {wallet} = useWallet()
+console.log( wallet);
   return (
     <Modal isOpen={isOpen} onClose={onClose} motionPreset="slideInBottom">
       <ModalOverlay />

@@ -5,8 +5,9 @@ import logo from "../src/static/storm_logo.png";
 import svg_logo from "../src/static/logo_with_word.svg";
 import bg from "../src/assets/nft/infynft/back.png";
 import ConnectButton from "./components/connect_button";
-import { useDisclosure } from "@chakra-ui/react";
+import { useDisclosure, useToast } from "@chakra-ui/react";
 import OpenPoolModal from "./components/OpenPoolModal";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 const navitems = [
   {
@@ -41,7 +42,9 @@ const InfyNft = () => {
     closeAfterClick?.classList?.toggle("open");
   };
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const toast = useToast();
+  // wallet and wallet information
+  const { wallet, connected } = useWallet();
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -59,9 +62,10 @@ const InfyNft = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div className="bg-[#050C24] font-interfont">
-      <OpenPoolModal isOpen={isOpen} onClose={onClose}/>
+      <OpenPoolModal isOpen={isOpen} onClose={onClose} />
       <div className="relative mx-auto pt-6 flex flex-col items-center justify-center text-[#D2DADF] bg-[url('./src/assets/nft/infynft/gradient.svg')] bg-cover">
         <div className="absolute top-0 z-[1] opacity-10 w-full">
           <img src={bg} alt="backimg" className="mx-auto" />
@@ -183,7 +187,23 @@ const InfyNft = () => {
               </div>
 
               <div className="flex flex-col py-5 px-4 gap-y-3 z-20">
-                <button className="hover:border hover:border-white border border-transparent btn font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500  cursor-pointer " onClick={onOpen}>
+                <button
+                  className="hover:border hover:border-white border border-transparent btn font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500  cursor-pointer "
+                  onClick={() => {
+                    if (connected) {
+                      onOpen.call();
+                    } else {
+                      toast({
+                        title: "Access Denied.",
+                        description:
+                          "Please Connect your wallet to access this feature",
+                        status: "warning",
+                        duration: 9000,
+                        isClosable: true,
+                      });
+                    }
+                  }}
+                >
                   Open Pool
                 </button>
                 <button className="  border border-transparent btn font-semibold text-white rounded-lg bg-gradient-to-r from-[#5FE716] via-[#209B72] to-teal-500 shadow-md hover:border-green-600 hover:bg-none hover:text-green-600 transition-all delay-200 ease-in-out">
@@ -243,32 +263,3 @@ const InfyNft = () => {
 };
 
 export default InfyNft;
-
-export const Accordion = ({ title, content }) => {
-  const [expanded, setExpanded] = useState(false);
-  const toggleExpanded = () => setExpanded((current) => !current);
-  return (
-    <div
-      className="w-full cursor-pointer bg-transparent shadow-sm"
-      onClick={toggleExpanded}
-    >
-      <div className="flex h-16 select-none flex-row items-center justify-between text-left md:h-16">
-        <h5 className="flex-1 text-sm font-normal leading-tight sm:text-lg md:text-lg">
-          {title}
-        </h5>
-        <div className="flex h-6 w-6 items-center justify-center rounded-full">
-          {expanded ? "-" : "+"}
-        </div>
-      </div>
-      <div
-        className={`overflow-hidden pt-0 transition-[max-height] duration-500 ease-in ${
-          expanded ? "max-h-40" : "max-h-0"
-        }`}
-      >
-        <p className="pb-4 text-left text-xs font-normal tracking-[0.01em] opacity-60 sm:text-sm leading-[28px]">
-          {content}
-        </p>
-      </div>
-    </div>
-  );
-};
