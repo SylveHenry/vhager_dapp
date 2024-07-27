@@ -22,13 +22,13 @@ function App() {
   const wallets = useMemo(() => walletOptions, []);
   return (
     <>
-      <ConnectionProvider endpoint="http://localhost:8899">
+      {/* <ConnectionProvider endpoint="http://localhost:8899"> */}
         <WalletProvider autoConnect wallets={wallets}>
           <WalletModalProvider>
             <InfyNft />
           </WalletModalProvider>
         </WalletProvider>
-      </ConnectionProvider>
+      {/* </ConnectionProvider> */}
     </>
   );
 }
