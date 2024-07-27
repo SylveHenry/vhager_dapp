@@ -64,7 +64,7 @@ const InfyNft = () => {
   }, []);
 
   return (
-    <div className="bg-[#050C24] font-interfont flex flex-col justify-between items-center min-h[100vh] flex-grow">
+    <div className="bg-[#050C24] font-interfont flex flex-col justify-between items-center h-[100vh] flex-grow">
       <div className="w-full">
         <OpenPoolModal isOpen={isOpen} onClose={onClose} />
         <div className="relative mx-auto pt-6 flex flex-col items-center justify-center text-[#D2DADF] bg-[url('./src/assets/nft/infynft/gradient.svg')] bg-cover">
