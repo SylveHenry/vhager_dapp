@@ -11,7 +11,7 @@ function Footer() {
               <img src={svg_logo} className="w-32" alt="logo" />
             </a>
             <div className="text-lg">
-              <span className="font-semibold">Vhager</span> on Solana. 
+              <span className="font-semibold">Vhagar</span> on Solana. 
               <br/> Not just a token!
             </div>
             <div className="-mt-1 hidden md:block text-sm">
@@ -95,7 +95,7 @@ function Footer() {
             </a>
           </div>
           <div className="-mt-1 md:hidden block">
-            &copy; {new Date().getFullYear()} Vhager. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Vhagar. All Rights Reserved.
           </div>
         </div>
       </div>
