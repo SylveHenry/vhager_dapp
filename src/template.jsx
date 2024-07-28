@@ -101,7 +101,7 @@ const InfyNft = () => {
                 <ConnectButton />
               </div>
             </div>
-            <div className=" md:hidden">
+            <div className=" md:hidden z-30">
               <ConnectButton />
             </div>
             <button
