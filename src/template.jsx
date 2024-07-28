@@ -88,11 +88,9 @@ const InfyNft = () => {
                     <a
                       href={data.link}
                       key={index}
-                      className={`hover:text-[#5EE616] hover:border-b-2 uppercase hover:border-[#5EE616] border-b-2 ${
-                        index === 0
-                          ? "border-[#5EE616] text-[#5EE616] border-b-2"
-                          : "border-transparent"
-                      }`}
+                      className={
+                        "hover:text-[#5EE616] hover:border-b-2 uppercase hover:border-[#5EE616] border-b-2   border-transparent"
+                      }
                     >
                       {data.text}
                     </a>
@@ -103,7 +101,7 @@ const InfyNft = () => {
                 <ConnectButton />
               </div>
             </div>
-            <div className="translate-x-10 md:hidden">
+            <div className=" md:hidden">
               <ConnectButton />
             </div>
             <button
