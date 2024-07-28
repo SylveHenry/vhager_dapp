@@ -11,45 +11,38 @@ function Footer() {
               <img src={svg_logo} className="w-32" alt="logo" />
             </a>
             <div className="text-lg">
-              We are a huge marketplace dedicated to connecting great artists of
-              all <span className="font-semibold">Vhager</span> with their fans
-              and unique token collectors!
+              <span className="font-semibold">Vhager</span> on Solana. 
+              <br/> Not just a token!
             </div>
             <div className="-mt-1 hidden md:block text-sm">
               &copy; 2024 Vhager. All Rights Reserved.
             </div>
           </div>
           <div className="flex flex-col gap-8 md:gap-10">
-            <div className="font-semibold text-xl">Company</div>
+            <div className="font-semibold text-xl">Raydium</div>
             <div className="flex flex-col gap-4 text-lg">
               <a href="#_" className="hover:opacity-60">
                 About
               </a>
               <a href="#_" className="hover:opacity-60">
-                Careers
+                Tokenomics
               </a>
               <a href="#_" className="hover:opacity-60">
-                Press
-              </a>
-              <a href="#_" className="hover:opacity-60">
-                Engineering Blog
+                Roadmap
               </a>
             </div>
           </div>
           <div className="flex flex-col gap-8 md:gap-10">
-            <div className="font-semibold text-xl">Customer</div>
+            <div className="font-semibold text-xl">Dex Screener</div>
             <div className="flex flex-col gap-4 text-lg">
               <a href="#_" className="hover:opacity-60">
-                Clinet Support
+                Jupiter Dex
               </a>
               <a href="#_" className="hover:opacity-60">
-                Latest news
+                Coinmarketcap
               </a>
               <a href="#_" className="hover:opacity-60">
-                Company Details
-              </a>
-              <a href="#_" className="hover:opacity-60">
-                Who we are{" "}
+                Whitepaper
               </a>
             </div>
           </div>
