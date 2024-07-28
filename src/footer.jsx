@@ -15,7 +15,7 @@ function Footer() {
               <br/> Not just a token!
             </div>
             <div className="-mt-1 hidden md:block text-sm">
-              &copy; 2024 Vhager. All Rights Reserved.
+              &copy; 2024 Vhagar. All Rights Reserved.
             </div>
           </div>
           <div className="flex flex-col gap-8 md:gap-10">
