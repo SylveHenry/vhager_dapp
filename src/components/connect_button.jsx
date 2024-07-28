@@ -9,7 +9,7 @@ import React from "react";
 
 const buttonStyle = {
   backgroundColor: "#16B19A",
-  zIndex: 6,
+  zIndex: 40,
   lineHeight: "unset",
 };
 function ConnectButton({ className }) {

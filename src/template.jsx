@@ -103,8 +103,9 @@ const InfyNft = () => {
                 <ConnectButton />
               </div>
             </div>
-
-            <ConnectButton className='translate-x-10'/>
+            <div className="translate-x-10 md:hidden">
+              <ConnectButton />
+            </div>
             <button
               className="w-12 h-12 relative focus:outline-none md:hidden overscroll-none"
               onClick={() => {
