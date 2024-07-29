@@ -43,4 +43,7 @@
     @apply opacity-50;
 
 }
+.text-small{
+    font-size: 12px;
+}
 

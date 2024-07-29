@@ -73,14 +73,14 @@ const InfyNft = () => {
           </div>
           {/* HEADER */}
           <div
-            className={`w-full flex md:block px-5 ${
+            className={`w-full flex items-center md:block px-5 ${
               isScrolled &&
               "backdrop-blur-sm bg-white/20 fixed top-0 pt-5 z-40 backdrop-filter md:h-20 overscroll-none"
             }`}
           >
-            <div className="md:max-w-[1120px] flex items-center justify-between md:px-0 md:gap-5 mb-8 md:mb-16 container md:mx-auto">
-              <a href="#_" className="z-10">
-                <img className="w-40" src={svg_logo} alt="logo" />
+            <div className="md:max-w-[1120px] flex items-center justify-between  md:px-0 md:gap-5 mb-8 md:mb-16 container  md:mx-auto">
+              <a href="#" className="z-10">
+                <img className="w-28 " src={svg_logo} alt="logo" />
               </a>
               <div className="gap-5 md:flex hidden z-10">
                 {navitems.map((data, index) => {
@@ -89,7 +89,7 @@ const InfyNft = () => {
                       href={data.link}
                       key={index}
                       className={
-                        "hover:text-[#5EE616] hover:border-b-2 uppercase hover:border-[#5EE616] border-b-2   border-transparent"
+                        "hover:text-[#5EE616] text-small font-cartoon hover:border-b-2 uppercase hover:border-[#5EE616] border-b-2   border-transparent"
                       }
                     >
                       {data.text}
@@ -97,15 +97,15 @@ const InfyNft = () => {
                   );
                 })}
               </div>
-              <div className="gap-2 md:flex hidden">
+              <div className="gap-2 md:flex items-center hidden">
                 <ConnectButton />
               </div>
             </div>
-            <div className=" md:hidden z-30">
+            <div className=" md:hidden -translate-y-4 flex item-center z-30">
               <ConnectButton />
             </div>
             <button
-              className="w-12 h-12 relative focus:outline-none md:hidden overscroll-none"
+              className="w-12 h-12 z-30 -translate-y-3 relative focus:outline-none md:hidden overscroll-none"
               onClick={() => {
                 toggleClass();
                 setToggle(!toggle);
@@ -139,7 +139,7 @@ const InfyNft = () => {
                   <div key={index} className="p-3">
                     <a
                       href={data.link}
-                      className="font-bold text-lg uppercase "
+                      className="font-bold text-small font-cartoon text-lg uppercase "
                     >
                       {data.text}
                     </a>
