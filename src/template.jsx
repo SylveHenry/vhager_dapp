@@ -79,7 +79,7 @@ const InfyNft = () => {
             }`}
           >
             <div className="md:max-w-[1120px] flex items-center justify-between  md:px-0 md:gap-5 mb-8 md:mb-16 container  md:mx-auto">
-              <a href="#" className="z-10">
+              <a href="https://vhager.finance/" className="z-10">
                 <img className="w-28 " src={svg_logo} alt="logo" />
               </a>
               <div className="gap-5 md:flex hidden z-10">
@@ -152,10 +152,10 @@ const InfyNft = () => {
           <div className="px-5 xl:px-0 z-10 relative">
             <div className="page-item">
               <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold font-cartoon">
-                VHAGAR staking pool
+                VHAGER staking pool
               </h3>
               <p className="text-center text-lg mb-3">
-                Vhagar on Solana Staking Pool.
+                Vhager on Solana Staking Pool.
               </p>
 
               {/* stake container */}
