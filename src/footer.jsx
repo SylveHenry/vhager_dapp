@@ -25,7 +25,9 @@ function Footer() {
             </div>
           </div>
           <div className="flex flex-col gap-8 md:gap-10">
-            <div className="font-semibold text-xl">Raydium</div>
+            <a href="#_" className="font-semibold text-xl hover:opacity-60">
+              Raydium
+            </a>
             <div className="flex flex-col gap-4 text-lg">
               <a href="#_" className="hover:opacity-60">
                 About
@@ -38,6 +40,7 @@ function Footer() {
               </a>
             </div>
           </div>
+          
           <div className="flex flex-col gap-8 md:gap-10">
             <div className="font-semibold text-xl">Dex Screener</div>
             <div className="flex flex-col gap-4 text-lg">
@@ -48,7 +51,7 @@ function Footer() {
                 Coinmarketcap
               </a>
               <a href="#_" className="hover:opacity-60">
-                Whitepaper
+                GreenPaper
               </a>
             </div>
           </div>

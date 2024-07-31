@@ -12,23 +12,23 @@ import { useWallet } from "@solana/wallet-adapter-react";
 const navitems = [
   {
     text: "about",
-    link: "https://winterstorm.finance/#about",
+    link: "https://vhager.finance/#about",
   },
   {
     text: "tokenomics",
-    link: "https://winterstorm.finance/#tokenomics",
+    link: "https://vhager.finance/#tokenomics",
   },
   {
     text: "roadmap",
-    link: "https://winterstorm.finance/#roadmap",
+    link: "https://vhager.finance/#roadmap-container",
   },
   {
     text: "community",
-    link: "https://winterstorm.finance/#community",
+    link: "https://vhager.finance/#network",
   },
   {
-    text: "whitepaper",
-    link: "https://docs.winterstorm.finance",
+    text: "greenpaper",
+    link: "https://docs.vhager.finance",
   },
 ];
 
