@@ -79,7 +79,7 @@ const InfyNft = () => {
             }`}
           >
             <div className="md:max-w-[1120px] flex items-center justify-between  md:px-0 md:gap-5 mb-8 md:mb-16 container  md:mx-auto">
-              <a href="https://vhagar.finance/" className="z-10">
+              <a href="https://vhagar.finance/" className="z-10" target="_blank" rel="noopener noreferrer">
                 <img className="w-28 " src={svg_logo} alt="logo" />
               </a>
               <div className="gap-5 md:flex hidden z-10">
@@ -88,6 +88,8 @@ const InfyNft = () => {
                     <a
                       href={data.link}
                       key={index}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={
                         "hover:text-[#5EE616] text-small font-cartoon hover:border-b-2 uppercase hover:border-[#5EE616] border-b-2   border-transparent"
                       }
@@ -140,6 +142,8 @@ const InfyNft = () => {
                     <a
                       href={data.link}
                       className="font-bold text-small font-cartoon text-lg uppercase "
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {data.text}
                     </a>
