@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Footer from "./footer";
 import "@fontsource-variable/inter";
-import logo from "../src/static/storm_logo.png";
+import logo from "../src/static/logo.png";
 import svg_logo from "../src/static/logo_with_word.svg";
 import bg from "../src/assets/nft/infynft/back.png";
 import ConnectButton from "./components/connect_button";
@@ -12,23 +12,23 @@ import { useWallet } from "@solana/wallet-adapter-react";
 const navitems = [
   {
     text: "about",
-    link: "https://vhager.finance/#about",
+    link: "https://vhagar.finance/#about",
   },
   {
     text: "tokenomics",
-    link: "https://vhager.finance/#tokenomics",
+    link: "https://vhagar.finance/#tokenomics",
   },
   {
     text: "roadmap",
-    link: "https://vhager.finance/#roadmap-container",
+    link: "https://vhagar.finance/#roadmap-container",
   },
   {
     text: "community",
-    link: "https://vhager.finance/#network",
+    link: "https://vhagar.finance/#network",
   },
   {
     text: "greenpaper",
-    link: "https://docs.vhager.finance",
+    link: "https://docs.vhagar.finance",
   },
 ];
 
@@ -79,7 +79,7 @@ const InfyNft = () => {
             }`}
           >
             <div className="md:max-w-[1120px] flex items-center justify-between  md:px-0 md:gap-5 mb-8 md:mb-16 container  md:mx-auto">
-              <a href="https://vhager.finance/" className="z-10">
+              <a href="https://vhagar.finance/" className="z-10">
                 <img className="w-28 " src={svg_logo} alt="logo" />
               </a>
               <div className="gap-5 md:flex hidden z-10">
@@ -152,10 +152,10 @@ const InfyNft = () => {
           <div className="px-5 xl:px-0 z-10 relative">
             <div className="page-item">
               <h3 className="uppercase text-center text-gradient mb-3 text-3xl font-semibold font-cartoon">
-                VHAGER staking pool
+                VHAGAR staking pool
               </h3>
               <p className="text-center text-lg mb-3">
-                Vhager on Solana Staking Pool.
+                Vhagar on Solana Staking Pool.
               </p>
 
               {/* stake container */}

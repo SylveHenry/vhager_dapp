@@ -1,4 +1,4 @@
-# Vhager Dapp Project
+# Vhagar Dapp Project
 
 Steps For Structuring Project
 
